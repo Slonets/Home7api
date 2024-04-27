@@ -20,7 +20,7 @@ namespace home7api.Controllers
             return Ok(await unitService.GetById(id));
         }
 
-        [HttpPost("AddNewUnit")]
+        [HttpPost("add")]
         public async Task<IActionResult> AddNewUnit([FromForm] CreateUnitDto createUnitDto)
         {
             await unitService.AddUnit(createUnitDto);
@@ -28,7 +28,7 @@ namespace home7api.Controllers
         }
 
         [HttpPost("Delete")]
-        public async Task<IActionResult> AddNewUnit([FromForm] int id)
+        public async Task<IActionResult> Delete([FromForm] int id)
         {
             await unitService.DeleteUnit(id);
             return Ok();

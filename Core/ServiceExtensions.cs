@@ -10,7 +10,7 @@ namespace Core
         {
             servicesCollection.AddScoped<IFilesService, FilesService>();
             servicesCollection.AddScoped<IUnit, UnitService>();
-
+            
         }
         public static void CustomMapper(this IServiceCollection servicesCollection)
         {
